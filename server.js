@@ -6,6 +6,7 @@ const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
+app.use(express.static(`${__dirname}/public`))
 
 // include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
